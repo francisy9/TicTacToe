@@ -12,10 +12,6 @@ def display_board(board):
     print(board[1]+'|'+board[2]+'|'+board[3])
 
 
-test_board = ['#','X','O','X','O','X','O','X','O','X']
-display_board(test_board)
-
-
 
 
 def player_input():
@@ -29,8 +25,6 @@ def player_input():
             print('Please choose x or o.')
             
     return mark
-
-player_input()
 
 
 
@@ -54,8 +48,6 @@ def win_check(board, mark):
         if board[l]==board[l+3]==board[l+6]==mark:
             return True
     return board[1]==board[5]==board[9]==mark or board[3]==board[5]==board[7]==mark
-
-win_check(test_board,'X')
 
 
 
@@ -101,8 +93,6 @@ def player_choice(board,mark):
         else:
             free = space_check(board,choice)
     return choice
-        
-player_choice(['#','','','','','','','','',''],'x')
 
 
 
@@ -114,7 +104,6 @@ def replay():
         option = input('Do you wanna play again? (Y,N)')
     return option=='Y'
 
-replay()
 
 
 
