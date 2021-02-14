@@ -33,9 +33,6 @@ def place_marker(board, marker, position):
 
         board[position]=marker
 
-place_marker(test_board,'$',8)
-display_board(test_board)
-
 
 
 
@@ -79,7 +76,7 @@ def player_choice(board,mark):
     
     while text not in ['1','2','3','4','5','6','7','8','9'] or not free:
         
-        text= input('Place {mark}. Where do you wanna go next? (1-9)'.format)
+        text= input(f'Place {mark}. Where do you wanna go next? (1-9)')
         
         if text not in ['1','2','3','4','5','6','7','8','9']:
             print('Please intput a digit between 1 and 9.')
@@ -142,7 +139,7 @@ while True:
             place_marker(board, first, position)
             display_board(board)
             if win_check(board, first):
-                print('{first} won!'.format)
+                print(f'{first} won!')
                 break
             if full_board_check(board):
                 print('Draw!')
@@ -153,7 +150,7 @@ while True:
             place_marker(board, second, position)
             display_board(board)
             if win_check(board, second):
-                print('{second} won!'.format)
+                print(f'{second} won!')
                 playing=False
                 break
             if full_board_check(board):
